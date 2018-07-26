@@ -1,8 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/wizard/.oh-my-zsh
+source ~/.custom-system-config
 
 export EDITOR=rubymine
 export URL='rubymine://open?file=%{file}&line=%{line}'
@@ -19,11 +18,12 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
 
 # color scheme
 POWERLEVEL9K_DIR_HOME_BACKGROUND=037
-
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND=037
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=160
 
 # hide whole path to dir
-#POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-#POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 
 # Set list of themes to load
 # Setting this variable when SH_THEME=random

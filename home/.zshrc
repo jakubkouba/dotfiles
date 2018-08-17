@@ -3,7 +3,7 @@
 
 source ~/.custom-system-config
 
-export EDITOR=rubymine
+export EDITOR=vim
 export URL='rubymine://open?file=%{file}&line=%{line}'
 
 # Set name of the theme to load. Optionally, if you set this to "random"

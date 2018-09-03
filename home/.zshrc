@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source ~/.custom-system-config
+source ~/.aliases
 
 export EDITOR=vim
 export URL='rubymine://open?file=%{file}&line=%{line}'

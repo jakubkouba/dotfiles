@@ -1,0 +1,5 @@
+[GIT]
+
+# Reset last commit
+alias grlast = git reset HEAD~1
+

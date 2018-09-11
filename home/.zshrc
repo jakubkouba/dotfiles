@@ -2,6 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source ~/.custom-system-config
+source ~/.aliases
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 export EDITOR=vim
 export URL='rubymine://open?file=%{file}&line=%{line}'
@@ -79,6 +83,7 @@ plugins=(
   git
   bundler
   battery
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh

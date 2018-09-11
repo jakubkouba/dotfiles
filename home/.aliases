@@ -3,4 +3,4 @@ alias lla='ls -al'
 
 # SSH
 # List all hosts
-alias sshhosts="rep -w -i 'Host' ~/.ssh/config | sed 's/Host//'"
+alias sshhosts="grep -w -i 'Host' ~/.ssh/config | sed 's/Host//'"

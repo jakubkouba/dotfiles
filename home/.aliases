@@ -4,3 +4,8 @@ alias lla='ls -al'
 # SSH
 # List all hosts
 alias sshhosts="grep -w -i 'Host' ~/.ssh/config | sed 's/Host//'"
+#[GIT]
+
+# Reset last commit
+alias grlast='git reset HEAD~1'
+

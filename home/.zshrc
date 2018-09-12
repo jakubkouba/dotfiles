@@ -83,7 +83,7 @@ plugins=(
   git
   bundler
   battery
-  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -4,8 +4,12 @@
 source ~/.custom-system-config
 source ~/.aliases
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# Enable node version namager if present:w
+if [[ -e $(brew --prefix nvm)/nvm.sh ]]
+then
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh	
+fi
 
 export EDITOR=vim
 export URL='rubymine://open?file=%{file}&line=%{line}'

@@ -24,6 +24,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 map <C-n> :NERDTreeToggle<CR>
+let NERDTtreeShowHidden=1
 
 "autocmd vimenter * NERDTree
 

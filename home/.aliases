@@ -9,3 +9,5 @@ alias sshhosts="grep -w -i 'Host' ~/.ssh/config | sed 's/Host//'"
 # Reset last commit
 alias grlast='git reset HEAD~1'
 
+# log
+alias gloc='git log --pretty=format:"[%h]-[%cr:%cD] %an: %s"'

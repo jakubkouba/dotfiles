@@ -1,6 +1,27 @@
 [user]
 	email = adler.jakub@gmail.com
 	name = Jakub Adler
+[alias]
+  	co = checkout
+  	ci = commit
+  	st = status
+  	br = branch
+  	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  	type = cat-file -t
+  	dump = cat-file -p
+	heroku = push heroku development:master
+[core]
+	editor = vim
+	excludesfile = /Users/wizard/.gitignore_global
+	autocrlf = input
+#[difftool "sourcetree"]
+#	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+#	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/wizard/.stCommitMsg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -9,4 +30,4 @@
 
 [pager]
 	diff = diff-so-fancy | less --tabs=1,5 -RFX
-       	show = diff-so-fancy | less --tabs=1,5 -RFX
+    	show = diff-so-fancy | less --tabs=1,5 -RFX

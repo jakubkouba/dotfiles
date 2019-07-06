@@ -11,3 +11,5 @@ alias grlast='git reset HEAD~1'
 
 # log
 alias gloc='git log --pretty=format:"[%h]-[%cr:%cD] %an: %s"'
+
+alias cat='bat'

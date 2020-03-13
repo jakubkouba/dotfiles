@@ -5,11 +5,13 @@ source ~/.custom-system-config
 source ~/.aliases
 
 # Enable node version namager if present:w
-if [[ -e $(brew --prefix nvm)/nvm.sh ]]
-then
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh	
-fi
+#if [[ -e $(brew --prefix nvm)/nvm.sh ]]
+#then
+#  export NVM_DIR=~/.nvm
+#  source $(brew --prefix nvm)/nvm.sh	
+#fi
+
+#printf "$(heroku autocomplete:script zsh)"
 
 export EDITOR=vim
 export URL='rubymine://open?file=%{file}&line=%{line}'
@@ -18,17 +20,19 @@ export URL='rubymine://open?file=%{file}&line=%{line}'
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+#POWERLEVEL9K_MODE='awesome-fontconfig'
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir newline vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir newline rvm vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 # color scheme
-POWERLEVEL9K_DIR_HOME_BACKGROUND=037
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND=037
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=160
+POWERLEVEL9K_DIR_HOME_BACKGROUND='037'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='069'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='009'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='010'
 
 # hide whole path to dir
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
@@ -120,3 +124,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export YVM_DIR=/usr/local/opt/yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh

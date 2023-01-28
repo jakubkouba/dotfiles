@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -21,22 +28,6 @@ export URL='rubymine://open?file=%{file}&line=%{line}'
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-#POWERLEVEL9K_MODE='awesome-fontconfig'
-
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time dir newline rvm vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-
-# color scheme
-POWERLEVEL9K_DIR_HOME_BACKGROUND='037'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='069'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='009'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='010'
-
-# hide whole path to dir
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_folders
 
 # Set list of themes to load
 # Setting this variable when SH_THEME=random
@@ -94,7 +85,7 @@ plugins=(
   docker-compose
 )
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
 # User configuration
 
@@ -127,3 +118,6 @@ source $ZSH/oh-my-zsh.sh
 
 export YVM_DIR=/usr/local/opt/yvm
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

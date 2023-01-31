@@ -83,6 +83,7 @@ plugins=(
   bundler
   battery
   docker-compose
+  zsh-autosuggestions
 )
 
 source $HOME/.oh-my-zsh/oh-my-zsh.sh

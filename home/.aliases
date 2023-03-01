@@ -28,3 +28,6 @@ alias clr_sping_cache='ps aux | grep ruby | grep -v grep | grep -v rubymine | aw
 
 #app PID
 alias rails_pid='lsof -wni tcp:3000'
+
+#AWS
+alias elb='aws elasticbeanstalk'

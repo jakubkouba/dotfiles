@@ -35,3 +35,6 @@ alias elb='aws elasticbeanstalk'
 # Digital Ocean
 alias do_db='psql -h forty-unbroken-db-postgresql-do-user-3131489-0.b.db.ondigitalocean.com -p 25060 -U doadmin -d defaultdb'
 
+# Git
+add_worktree() { git worktree add .worktrees/${1:-$(git branch --show-current)} $(git branch --show-current); }
+

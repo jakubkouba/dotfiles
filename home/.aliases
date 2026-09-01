@@ -37,4 +37,5 @@ alias do_db='psql -h forty-unbroken-db-postgresql-do-user-3131489-0.b.db.ondigit
 
 # Git
 add_worktree() { git worktree add .worktrees/${1:-$(git branch --show-current)} $(git branch --show-current); }
-
+# Log with date author and hash
+alias glwd='git log --pretty=format:"%C(green)%ad%C(reset) %C(magenta)%<(25)%an%C(reset) %C(yellow)%h%C(reset) %s" --date=iso' 

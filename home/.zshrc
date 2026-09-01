@@ -7,9 +7,16 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 source ~/.custom-system-config
 source ~/.aliases
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+FPATH=~/.rbenv/completions:"$FPATH"
+
+autoload -U compinit
+compinit
 
 # Enable node version namager if present:w
 #if [[ -e $(brew --prefix nvm)/nvm.sh ]]
